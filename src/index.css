@@ -1,13 +1,468 @@
-body {
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@300&family=Unbounded:wght@300&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
+  /* background-color: #fff; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --bgcolor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: #828286;
+  --main-text-color: #333333;
+
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+/*------------------------------navbar style start----------------------------*/
+
+.navbar-bg {
+  background-color: var(--bgcolor);
+  padding: 0.5rem 0;
+  z-index: 99;
+  position: relative;
+
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.navbar li {
+  padding: 0 1rem;
+}
+
+.navbar li a {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  position: relative;
+}
+
+.navbar li a:hover {
+  color: #6f5de7;
+  text-shadow: 0 0.5rem 0.3rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style {
+  height: 3rem;
+  width: 6rem;
+  border-radius: 2rem;
+  color: white;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.btn-style:hover {
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  box-shadow: 0 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style:first-child {
+  margin-right: 1rem;
+}
+/*----------------------navbar end-----------------------*/
+
+
+
+/*-------------------------first container left-side start-----------------*/
+header {
+  background-color: var(--bgcolor);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-hero-container {
+  height: 80vh;
+  display: flex;
+ 
+}
+.main-hero-container h1 {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  margin-top: 5.5rem;
+
+}
+
+.main-hero-para {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+  width: 100%;
+}
+
+.main-hero-para h3 {
+  font-weight: lighter;
+}
+/*-------------------------first container left side end-----------------*/
+
+
+
+/*----------------right- side -image start------------------------*/
+.main-herosection-images {
+  position: relative;
+}
+
+.main-herosection-images img {
+  width: 60%;
+  height: 70%;
+  margin-top: 10rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.main-herosection-images .main-hero-img2 {
+  position: absolute;
+  width: 50%;
+  height: 38%;
+  left: 68%;
+  top: -10%;
+  box-shadow: 0.8rem 0 0.8rem rgba(0, 0, 0, 0.25);
+}
+/*----------------Right side image end-----------------*/
+
+
+
+/*---------------------search box text-------------*/
+
+.input-group{
+  position:relative !important;
+}
+
+.input-group-button{
+  position:absolute;
+  right: 45%;
+ 
+ color: #fff;
+ font-weight: bolder;
+  background-color: var(--primary-color);
+  height: 3rem;
+  width: 15%;
+  border-radius: 2rem !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+
+}
+.form-control-text{
+  position: absolute;
+  height: 3rem;
+  outline-style: none;
+  padding-left: 1.5rem !important;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+/*------------------------Search box text end--------------------*/
+
+
+/*----------------------second container box--------------------*/
+
+.work-container {
+  width: 80vw;
+  padding: 5rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  margin-top: -5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.main-heading{
+  font-size: 3rem;
+  font-weight:bolder;
+  font-style: italic;
+  margin-bottom: 2rem;
+  
+}
+
+.fontawesome-style{
+  font-size: 2rem;
+  color: var(--primary-color);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  display: grid;
+  place-items:center;
+  align-items: center;
+ margin: 2rem auto;
+}
+/*-----------------Second container box end------------*/
+
+
+/*-------------------About us start----------------------*/
+
+.common-section{
+  margin: 5rem 0;
+}
+.our-services img{
+  width: 70%;
+  height: 65%;
+  margin-top: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.8rem 0.8rem;
+  border-radius: 1.5rem;
+}
+.mini-title{
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 3rem 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.our-services-info{
+  margin-top: 4rem;
+}
+.our-services-number{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1rem;
+  color: var(--primary-color);
+  display: grid ;
+  place-items: center;
+  align-items: center;
+  margin: 0rem 2rem;
+}
+.our-services-data{
+  padding-left: -2rem;
+}
+.our-services-data p{
+  margin: 1rem 0;
+}
+.btn-style-border{
+  width: 8rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #6f5de7;
+}
+/*-------------------------About us end--------------------*/
+
+/*------------------------Service container start----------------*/
+
+.Services-main-container{
+  margin-top: 5rem;
+  padding: 5rem 0;
+
+}
+.main-heading{
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.work-container-sub-div{
+  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.service-main-container .work-container-subdiv .fontawesome-style {
+  text-align: left;
+  margin: 2rem 0;
+}
+.work-container-sub-div:hover{
+  background-color: skyblue;
+  cursor: pointer;
+}
+/*------------------------Service container end----------------*/
+
+/*------------------------Contactus-page----------------*/
+.contactus-section{
+ margin-top: 10rem ;
+ padding-top: 50% 0;
+}
+
+.contactus-leftside{
+padding-bottom: 10rem;
+}
+.contactus-leftsid.main-hero-para-p{
+  margin-bottom: 2rem;
+
+}
+
+
+.contactus-section{
+  margin: 8rem 0;
+}
+.contactus-leftside img{
+height: 50%;
+width: 58%;
+border-radius: 2rem;
+box-shadow: 2rem 0 1.5rem rgba(0, 0, 0, 0.1);
+}
+.contact-input-field{
+  margin-bottom: 3rem;
+}
+.form-control{
+  height:4rem ;
+}
+
+.btn-new{
+  margin: 1rem;
+}
+
+
+/*------------------------Contactus-page-end----------------*/
+
+
+
+/*------------------------Footer start----------------*/
+footer{
+  padding: 3rem 0;
+  background-color: #182334;
+  color: #fff;
+}
+footer h2{
+  color: #fff;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+footer li{
+  list-style: none;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.3rem 0;
+}
+footer li:hover{
+  color: var(--primary-color);
+}
+footer .fontawesome-style:hover{
+  transition: all 1s;
+  animation: rotatefont 1s linear infinite alternate-reverse;
+  color: blue;
+}
+@keyframes rotatefont{
+  0%{transform: scale(0.6)}
+  100%{
+    transform: scale(1.2);
+  }
+}
+/*-----------------------Footer End-------------------------*/
+
+/*-----------------------Error page start-------------------*/
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 46px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.notfound p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.notfound a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #189cf0;
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  background-color: #fff;
+  border-color: #189cf0;
+  color: #189cf0;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+  .notfound h2 {
+    font-size: 26px;
+  }
+}
+/*-------------------------------Error page End-------------------------*/
+
